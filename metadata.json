@@ -1,0 +1,5 @@
+{
+  "name": "Portal Risiko Pusri",
+  "description": "Sistem Manajemen Risiko Terpadu PT Pupuk Sriwidjaja Palembang - Identifikasi Risiko, Review Atasan/VP, Approval Admin, Pengendalian Triwulan (TW 1-4), dan Evaluasi Carry Over dengan Backend Golang \u0026 Database MySQL terintegrasi.",
+  "requestFramePermissions": []
+}

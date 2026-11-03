@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Risiko Pusri - PT Pupuk Sriwidjaja Palembang</title>
+    <meta name="description" content="Sistem Manajemen Risiko Terpadu PT Pupuk Sriwidjaja Palembang - Identifikasi Risiko, Review Atasan/VP, Approval Admin, Pengendalian Triwulan (TW 1-4), dan Evaluasi Carry Over dengan Backend Golang & Database MySQL terintegrasi." />
+    <meta property="og:title" content="Portal Risiko Pusri - PT Pupuk Sriwidjaja Palembang" />
+    <meta property="og:description" content="Sistem Manajemen Risiko Terpadu PT Pupuk Sriwidjaja Palembang - Identifikasi Risiko, Review Atasan/VP, Approval Admin, Pengendalian Triwulan (TW 1-4), dan Evaluasi Carry Over dengan Backend Golang & Database MySQL terintegrasi." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/logo-pusri.png" />
+    <link rel="apple-touch-icon" href="/logo-pusri.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      // Neutralize Vite HMR WebSocket in preview iframe environment where HMR is disabled
+      (function () {
+        var NativeWebSocket = window.WebSocket;
+        if (typeof NativeWebSocket === 'function') {
+          var WrappedWebSocket = function (url, protocols) {
+            var isViteHmr =
+              protocols === 'vite-hmr' ||
+              (Array.isArray(protocols) && protocols.indexOf('vite-hmr') !== -1) ||
+              (typeof url === 'string' && (url.indexOf(':24678') !== -1 || url.indexOf('token=') !== -1));
+            if (isViteHmr) {
+              var dummy = new EventTarget();
+              dummy.url = String(url || '');
+              dummy.protocol = 'vite-hmr';
+              dummy.readyState = 1;
+              dummy.bufferedAmount = 0;
+              dummy.extensions = '';
+              dummy.binaryType = 'blob';
+              dummy.send = function () {};
+              dummy.close = function () { dummy.readyState = 3; };
+              dummy.onopen = null;
+              dummy.onmessage = null;
+              dummy.onerror = null;
+              dummy.onclose = null;
+              setTimeout(function () {
+                var evt = new Event('open');
+                dummy.dispatchEvent(evt);
+                if (typeof dummy.onopen === 'function') dummy.onopen(evt);
+              }, 0);
+              return dummy;
+            }
+            return arguments.length > 1
+              ? new NativeWebSocket(url, protocols)
+              : new NativeWebSocket(url);
+          };
+          WrappedWebSocket.prototype = NativeWebSocket.prototype;
+          WrappedWebSocket.CONNECTING = NativeWebSocket.CONNECTING;
+          WrappedWebSocket.OPEN = NativeWebSocket.OPEN;
+          WrappedWebSocket.CLOSING = NativeWebSocket.CLOSING;
+          WrappedWebSocket.CLOSED = NativeWebSocket.CLOSED;
+          window.WebSocket = WrappedWebSocket;
+        }
+      })();
+    </script>
+  </head>
+  <body class="font-['Plus_Jakarta_Sans',sans-serif] bg-slate-50 text-slate-900 antialiased selection:bg-[#009fe3] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
